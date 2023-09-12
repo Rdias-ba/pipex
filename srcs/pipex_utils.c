@@ -6,7 +6,7 @@
 /*   By: rdias-ba <rdias-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 19:50:16 by rdias-ba          #+#    #+#             */
-/*   Updated: 2023/08/25 19:57:59 by rdias-ba         ###   ########.fr       */
+/*   Updated: 2023/09/12 17:21:16 by rdias-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	open_file(char *file, int read_write)
 	if (read_write == 1)
 		ret = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0777);
 	if (ret == -1)
-		exit(0);
+		exit(1);
 	return (ret);
 }
 
@@ -100,9 +100,9 @@ void	run_cmds(char *cmd, char **env)
 	path = get_path(cmd_list[0], env);
 	if (execve(path, cmd_list, env) == -1)
 	{
-		ft_putstr_fd("command not found", 2);
+		ft_putstr_fd("command not found: ", 2);
 		ft_putendl_fd(cmd_list[0], 2);
 		free_tab(cmd_list);
-		exit(0);
+		exit(127);
 	}
 }

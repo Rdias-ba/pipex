@@ -6,7 +6,7 @@
 /*   By: rdias-ba <rdias-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 14:10:22 by rdias-ba          #+#    #+#             */
-/*   Updated: 2023/08/25 20:35:41 by rdias-ba         ###   ########.fr       */
+/*   Updated: 2023/09/12 17:13:00 by rdias-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	main(int argc, char **argv, char **env)
 	if (argc != 5)
 	{
 		ft_putstr_fd("ERROR: ./pipex infile cmd cmd outfile\n", 2);
-		exit(0);
+		exit(1);
 	}
 	if (pipe(folders) == -1)
 		exit(-1);
