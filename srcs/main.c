@@ -6,7 +6,7 @@
 /*   By: rdias-ba <rdias-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 14:10:22 by rdias-ba          #+#    #+#             */
-/*   Updated: 2023/09/12 17:13:00 by rdias-ba         ###   ########.fr       */
+/*   Updated: 2023/09/14 04:41:37 by rdias-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,9 @@ int	main(int argc, char **argv, char **env)
 	if (pid == -1)
 		exit(-1);
 	if (!pid)
+	{
 		child(argv, folders, env);
+		wait(NULL);
+	}
 	parent(argv, folders, env);
 }

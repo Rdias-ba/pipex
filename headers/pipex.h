@@ -6,12 +6,15 @@
 /*   By: rdias-ba <rdias-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 14:11:08 by rdias-ba          #+#    #+#             */
-/*   Updated: 2023/08/25 19:54:04 by rdias-ba         ###   ########.fr       */
+/*   Updated: 2023/09/14 04:39:08 by rdias-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
 # define PIPEX_H
+
+# include <sys/types.h>
+# include <sys/wait.h>
 
 # include "../libft/includes/ft_printf.h"
 # include "../libft/includes/libft.h"
